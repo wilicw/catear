@@ -1,0 +1,2 @@
+server.php:POST變數加上isset
+sql query:使用mysql_real_escape_string過濾

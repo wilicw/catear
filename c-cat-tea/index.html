@@ -1,0 +1,507 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>C貓全民貓茶 - 三校四社聯合茶會</title>
+    <link rel="shortcut icon" href="cats/cat03.png">
+
+    <meta charset="utf-8">
+    <meta name="theme-color" content="black">
+    <meta name="image" property="og:image" content="cats/cat02.png">
+    <meta name="description" content="7/21 ~ 7/22 松山高中大講堂">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO2LJzAEwos4YLURyBlZZPEyIBCbjObMs" defer></script>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <script src="materialize/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+
+    <!-- navigation start -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper grey darken-4">
+                <a onclick="navs('#title');cfe();" class="brand-logo">C貓全民貓茶</a>
+                <a data-target="mobile-demo" class="sidenav-trigger mi">menu</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a onclick="navs('#event');">活動資訊</a></li>
+                    <li><a onclick="navs('#gather')">集合資訊</a></li>
+                    <li><a onclick="navs('#vivre');js();">住宿資訊</a></li>
+                    <li><a class="dropdown-trigger" data-target="clubs">主辦社團</a></li>
+                    <!--li><a class="waves-effect waves-light btn white grey-text text-darken-4" href="form.html" target="_blank">報名參加</a></li-->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="clubs" class="dropdown-content grey darken-4 text-grey text-darken-4">
+        <li><a onclick="navs('#dacsc')">大安高工電腦研究社</a></li>
+        <li><a onclick="navs('#ssinrc')">松山高中資訊研究社</a></li>
+        <li><a onclick="navs('#crc')">師大附中電子計算機研究社</a></li>
+        <li><a onclick="navs('#cnmc')">師大附中校園網路管理小組</a></li>
+    </ul>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a class="white">
+                <h4>C貓全民貓茶</h4>
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a onclick="mnavs('#m-event');e();">茶會時間</a></li>
+        <li><a onclick="mnavs('#m-location');e();">茶會地點／聯絡人</a></li>
+        <li><a onclick="mnavs('#m-gather');e();">集合資訊</a></li>
+        <li><a onclick="mnavs('#m-vivre');e();js();">住宿資訊</a></li>
+        <ul class="collapsible center-align">
+            <li>
+                <div class="collapsible-header container">主辦社團</div>
+                <div class="collapsible-body">
+                    <a onclick="mnavs('#m-dacsc');e();">大安高工電腦研究社</a><br>
+                    <a onclick="mnavs('#m-ssinrc');e();">松山高中資訊研究社</a><br>
+                    <a onclick="mnavs('#m-crc');e();">師大附中電子計算機研究社</a><br>
+                    <a onclick="mnavs('#m-cnmc');e();">師大附中校園網路管理小組</a>
+                </div>
+            </li>
+        </ul>
+        <!--li><a class="waves-effect waves-teal btn" href="form.html" target="_blank">報名參加</a></li-->
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $(".dropdown-trigger").dropdown({
+                coverTrigger: false,
+                constrainWidth: false
+            });
+        });
+
+    </script>
+
+    <!-- navigation end -->
+
+    <!-- desktop start -->
+
+    <div id="main" class="hide-on-small-only">
+
+        <div id="cats" class="scrn" style="z-index: 20;width: 1440px;">
+            <img src="cats/cat02.png" style="bottom:1vh; left:43vw" class="h">
+            <img src="cats/cat03.png" style="bottom: 1vh; left: 1vw">
+            <img src="cats/cat04.png" style="right: 1vw">
+            <img src="cats/cat05.png" style="left: 1vw">
+            <img src="cats/cat06.png" style="bottom: 1vh; right: 1vw">
+        </div>
+
+        <div id="title" class="cmp scrn valign-wrapper">
+            <center style="width: 100vw">
+                <img id="cat01" src="cats/cat01.png">
+            </center>
+        </div>
+
+        <div id="event" class="cmp scrn no">
+            <center>
+                <div class="container row transparent" style="padding-top: 8vh">
+
+                    <div class="col s6">
+                        <h4>茶會時間</h4>
+                        <div class="divider"></div>
+                        <h5>7／21 - 13：00 ~ 17：00</h5>
+                        <table class="centered">
+                            <tbody>
+                                <tr>
+                                    <td>幹部介紹</td>
+                                    <td>13：00 ~ 13：40</td>
+                                </tr>
+                                <tr>
+                                    <td>友社介紹</td>
+                                    <td>13：40 ~ 14：00</td>
+                                </tr>
+                                <tr>
+                                    <td>公關時間</td>
+                                    <td>14：00 ~ 14：30</td>
+                                </tr>
+                                <tr>
+                                    <td>遊戲時間</td>
+                                    <td>14：30 ~ 15：30</td>
+                                </tr>
+                                <tr>
+                                    <td>交接時間</td>
+                                    <td>15：30 ~ 17：00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>7／22 - 台北遊</h5>
+                    </div>
+
+                    <div class="col s6">
+                        <h4>活動地點</h4>
+                        <div class="divider"></div>
+                        <h5>茶會 - 松山高中大講堂</h5>
+                        <h5>夜遊 - 公館商圈</h5>
+                        <h5>台北遊 - 大稻埕 ~ 社子島</h5><br>
+                        <h4>聯絡人</h4>
+                        <div class="divider"></div>
+                        <h5>吳聖翊 0966680137</h5>
+                        <h5>吳承軒 0979206167</h5>
+                        <h5>張庭嫣 0978141751</h5>
+                        <h5>陳立凡 0989113098</h5><br>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+        <div id="gather" class="cmp scrn no">
+            <div class="container row" style="padding-top: 4vh">
+                <h3>集合資訊</h3>
+                <div class="divider"></div><br>
+                <div class="col s5">
+                    <h5>12:00 ~ 12:30 台北車站M1出口</h5>
+                    <h6>陳威能 0965329080 / 吳承軒 0979206167<br><br></h6>
+                    <h5>12:15 ~ 12:45 捷運市府站1號出口</h5>
+                    <h6>蘇靜山  0922513412 / 吳聖翊 0966680137<br><br></h6>
+                    <h5>12:40 ~ 12:55 松山高中正門口</h5>
+                    <h6>杜恩語  0973237553 / 王柏森 0966173463<br><br></h6>
+                    <h5>夜遊、臺北遊</h5>
+                    <h6>吳聖翊 0966680137</h6><br>
+                </div>
+                <div class="col s7">
+                    <small>若地圖未正常顯示，請重新載入頁面</small>
+                    <div id="map_canvas" style="width:39%; height:48vh;position: absolute;z-index: 22;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="vivre" class="cmp scrn valign-wrapper no">
+            <div class="container row" style="padding-top: 8vh">
+                <h3>住宿資訊</h3>
+                <div class="divider"></div>
+                <div class="col s4">
+                    <h5>星盒青年旅館</h5>
+                    <h5>台北市大同區<br>南京西路288號4樓</h5>
+                    <h5>住宿+保險費共500元，請於當天攜帶</h5>
+                    <h5>攜帶行李請盡量輕便</h5>
+                    <h5>欲住宿者請交<b>住宿家長同意書</b></h5>
+                    <h4><br><b>※</b>住宿報名<b>已經截止</b></h4><br>
+                    <h6>
+                        住宿家長同意書：
+                        <a style="position: absolute;z-index: 30;" href="consent.pdf" target="_blank">開啟</a>
+                    </h6>
+                    <h6>
+                        星盒青年旅館官網：
+                        <a style="position: absolute;z-index: 30;" href="http://starbox-hostel.business.site/" target="_blank">開啟</a>
+                    </h6>
+                </div>
+                <div class="col s8"><br>
+                    <img src="hotel/hotel01.jpg" style="width: 265px;">
+                    <img src="hotel/hotel02.jpg" style="width: 265px;">
+                    <img src="hotel/hotel03.jpg" style="height: 200px;">
+                </div>
+            </div>
+        </div>
+
+        <div id="dacsc" class="cmp scrn valign-wrapper no">
+            <center style="width: 100vw;">
+                <div class="col s12 m7">
+                    <div class="card horizontal grey darken-3" style="width:70vw;margin-top: 14vh;">
+                        <div class="card-stacked">
+                            <div class="card-content row white-text">
+                                <div class="col s6 valign-wrapper">
+                                    <img src="club/dacsc.jpg" style="width: 100%;s">
+                                </div>
+                                <div class="col s6">
+                                    <h5>大安高工電腦研究社</h5>
+                                    <img src="club/dacsc.min.png" width="150" style="margin: 28px 0">
+                                    <p>
+                                        一群工具人組成電腦研究社<br> 使電腦教室充滿學術&活力
+                                        <br> 涵蓋演算法&&遊戲製作&&網頁創造&&硬體設備
+                                        <br> 在電資大家庭中一起學習、一起瘋狂、一起成長
+                                        <br> 即逝の青春中烙下最難忘的美好回憶！
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+        <div id="ssinrc" class="cmp scrn valign-wrapper no">
+            <center style="width: 100vw;">
+                <div class="col s12 m7">
+                    <div class="card horizontal grey darken-3" style="width:70vw;margin-top: 14vh;">
+                        <div class="card-stacked">
+                            <div class="card-content row white-text">
+                                <div class="col s6">
+                                    <h5>松山高中資訊研究社</h5>
+                                    <img src="club/ssinrc.min.png" width="250" style="margin: 40px 0">
+                                </div>
+                                <div class="col s6 valign-wrapper">
+                                    <img src="club/ssinrc.jpg" style="width: 100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+        <div id="crc" class="cmp scrn valign-wrapper no">
+            <center style="width: 100vw;">
+                <div class="col s12 m7">
+                    <div class="card horizontal grey darken-3" style="width:70vw;margin-top: 14vh;">
+                        <div class="card-stacked">
+                            <div class="card-content row white-text">
+                                <div class="col s6 valign-wrapper">
+                                    <img src="club/crc.jpg" style="width: 100%">
+                                </div>
+                                <div class="col s6">
+                                    <h5>師大附中電子計算機研究社</h5>
+                                    <img src="club/crc.min.png" width="120" style="margin: 16px 0">
+                                    <p>
+                                        國立臺灣師範大學附屬高級中學<br> 電子計算機研究社，
+                                        <br> 是由許世傑學長在1977年創立，
+                                        <br> 電算社是以學寫程式為主的社團，
+                                        <br> 從寫Python到C++都是我們具有的能力，
+                                        <br> 平時還會和友社一起辦活動增進感情和交流。
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+        <div id="cnmc" class="cmp scrn valign-wrapper no">
+            <center style="width: 100vw;">
+                <div class="col s12 m7">
+                    <div class="card horizontal grey darken-3" style="width:70vw;margin-top: 14vh;">
+                        <div class="card-stacked">
+                            <div class="card-content row white-text">
+                                <div class="col s6">
+                                    <h5>師大附中校園網路管理小組</h5>
+                                    <img src="club/cnmc.min.svg" width="130" style="margin: 14px 0">
+                                    <p>
+                                        附中網管小組全名為「國立臺灣師範大學<br>附屬高級中學校園網路管理小組」簡稱為網管或<br>網管小組，是一個由附中學生組成的義工組織，<br>由畢業及高三學長擔任顧問，歷代傳承管理<br>附中機房之網路伺服器。網管的宗旨、目的在<br>負責建構、管理、維護附中校園的網路資源。
+                                    </p>
+                                </div>
+                                <div class="col s6 valign-wrapper">
+                                    <img src="club/cnmc.jpg" style="width: 100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+    </div>
+
+    <script>
+        setTimeout(loadMap, 700);
+
+    </script>
+
+    <!-- deaktop end -->
+
+    <!-- mobile start -->
+
+    <div id="mobile" class="hide-on-med-and-up">
+
+        <div id="m-cats" class="white-text">
+            <img src="m-cats/top.png" style="width: 100vw;position: fixed;">
+            <img src="m-cats/bottom.png" style="width: 100vw;position: fixed;bottom: 0;">
+        </div>
+
+        <div id="m-title" class="mcmp scrn valign-wrapper">
+            <img src="m-cats/title.png" style="width: 100vw;padding-bottom: 20vh">
+        </div>
+
+        <div id="m-event" class="mcmp scrn no">
+
+            <div class="container" style="overflow: scroll;margin-top: 16vh;">
+                <h4>茶會時間</h4>
+                <div class="divider"></div>
+                <h5>7／21 13：00 ~ 17：00</h5>
+                <table class="centered">
+                    <tbody>
+                        <tr>
+                            <td>
+                                幹部介紹<br> 友社介紹
+                                <br> 公關時間
+                                <br> 遊戲時間
+                                <br> 交接時間
+                                <br>
+                            </td>
+                            <td>
+                                13：00 ~ 13：40<br> 13：40 ~ 14：00<br> 14：00 ~ 14：30<br> 14：30 ~ 15：30<br> 15：30 ~ 17：00<br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5>7／22 - 台北遊</h5>
+            </div>
+
+        </div>
+
+        <div id="m-location" class="mcmp scrn no">
+            <div class="col s6 container" style="margin-top: 16vh">
+                <h4>活動地點</h4>
+                <div class="divider"></div>
+                <h6>茶會 - 松山高中大講堂</h6>
+                <h6>夜遊 - 公館商圈</h6>
+                <h6>台北遊 - 大稻埕 ~ 社子島</h6><br>
+                <h4>聯絡人</h4>
+                <div class="divider"></div>
+                <h6>吳聖翊 0966680137</h6>
+                <h6>吳承軒 0979206167</h6>
+                <h6>張庭嫣 0978141751</h6>
+                <h6>陳立凡 0989113098</h6><br>
+            </div>
+
+        </div>
+
+        <div id="m-gather" class="mcmp scrn no">
+            <div class="container" style="margin-top: 15vh">
+                <h4>集合資訊</h4>
+                <div class="divider"></div>
+                <div class="row" style="width: 200vw;">
+                
+                    <div class="col s6" style="height:100%">
+                    
+                        <h6>12：00 ~ 12：30 - 台北車站M1出口</h6>
+                        <small>陳威能 - 0965329080 / 吳承軒 - 0979206167<br><br></small>
+                        <h6>12：15 ~ 12：45 - 捷運市府站1號出口</h6>
+                        <small>蘇靜山 - 0922513412 / 吳聖翊 - 0966680137</small><br><br>
+                        <h6>12：40 ~ 12：55 - 松山高中正門口</h6>
+                        <small>杜恩語 - 0973237553 / 王柏森 - 0966173463</small><br><br>
+                        <h6>夜遊、臺北遊</h6> <small>吳聖翊 - 0966680137</small><br>
+                        
+                    </div>
+                    
+                    <div class="col s6" style="height:100%">
+                        <small>若地圖未正常顯示，請重新載入頁面</small>
+                        <div id="m-map_canvas" style="width:100%; height:27vh;position: absolute;z-index: 22;"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div id="m-vivre" class="mcmp scrn no">
+            <div class="col s6 container" style="margin-top: 15vh">
+                <h4>住宿資訊</h4>
+                <div class="divider"></div>
+                <div class="col s4">
+                    <h5>星盒青年旅館</h5>
+                    <p>台北市大同區南京西路288號4樓<br> 住宿+保險費共500元，請於當天攜帶
+                        <br>攜帶行李請盡量輕便<br>
+                        住宿家長同意書：
+                        <a style="position: absolute;z-index: 30;" href="consent.pdf" target="_blank">開啟</a>&emsp;&emsp;&emsp;/&emsp;
+                        旅館官網：
+                        <a style="position: absolute;z-index: 30;" href="http://starbox-hostel.business.site/" target="_blank">開啟</a>
+                    </p>
+                </div>
+                <div style="height: 30vh; width: 100%;overflow: scroll;border-radius: 3px;">
+                    <div style="width:max-content;">
+                        <img src="hotel/hotel01.jpg" style="height: 200px;">
+                        <img src="hotel/hotel02.jpg" style="height: 200px;">
+                        <img src="hotel/hotel03.jpg" style="height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="m-dacsc" class="mcmp scrn no">
+            <center class="row" style="width:200vw;">
+                <div class="col s6" style="margin-top: 16vh">
+                    <h5>大安高工電腦研究社</h5>
+                    <img src="club/dacsc.min.png" width="150" style="margin: 5px 0">
+                    <small style="display: block">
+                        一群工具人組成電腦研究社<br> 使電腦教室充滿學術&活力
+                        <br> 涵蓋演算法&&遊戲製作&&網頁創造&&硬體設備
+                        <br> 在電資大家庭中一起學習、一起瘋狂、一起成長
+                        <br> 即逝の青春中烙下最難忘的美好回憶！
+                        <br>
+                    </small>
+                    <small class="center-align mi">arrow_forward</small>
+                </div>
+                <div class="col s6 valign-wrapper" style="margin-top: 26vh">
+                    <img src="club/dacsc.jpg" style="width: 100%">
+                </div>
+            </center>
+        </div>
+
+        <div id="m-ssinrc" class="mcmp scrn no">
+            <center class="row" style="width:200vw;">
+                <div class="col s6" style="margin-top: 16vh">
+                    <h5>松山高中資訊研究社</h5>
+                    <img src="club/ssinrc.min.png" width="160" style="margin: 15px 0">
+                    <small class="center-align mi" style="display: block">arrow_forward</small>
+                </div>
+                <div class="col s6 valign-wrapper" style="margin-top: 26vh">
+                    <img src="club/ssinrc.jpg" style="width: 100%">
+                </div>
+            </center>
+        </div>
+
+        <div id="m-crc" class="mcmp scrn no">
+            <center class="row" style="width:200vw;">
+                <div class="col s6" style="margin-top: 13vh">
+                    <h5>師大附中電子計算機研究社</h5>
+                    <img src="club/crc.min.png" width="130" style="margin: 5px 0">
+                    <small style="display: block">
+                        國立臺灣師範大學附屬高級中學<br>
+                        電子計算機研究社<br>
+                        是由許世傑學長在1977年創立，<br>
+                        電算社是以學寫程式為主的社團，<br>
+                        從寫Python到C++都是我們具有的能力，<br>
+                        平時還會和友社一起辦活動增進感情和交流。<br>
+                    </small>
+                    <small class="center-align mi" style="display: block">arrow_forward</small>
+                </div>
+                <div class="col s6 valign-wrapper" style="margin-top: 26vh">
+                    <img src="club/crc.jpg" style="width: 100%">
+                </div>
+            </center>
+        </div>
+
+        <div id="m-cnmc" class="mcmp scrn no">
+            <center class="row" style="width:200vw;">
+                <div class="col s6" style="margin-top: 14vh">
+                    <h5>師大附中校園網路管理小組</h5>
+                    <img src="club/cnmc.min.svg" class="grey lighten-2" width="130" style="padding: 5px;border-radius: 100%">
+                    <small style="display: block">
+                        附中網管小組全名為「國立臺灣師範大學<br>附屬高級中學校園網路管理小組」簡稱為網管或<br>網管小組，是一個由附中學生組成的義工組織，<br>由畢業及高三學長擔任顧問，歷代傳承管理<br>附中機房之網路伺服器。網管的宗旨、目的在<br>負責建構、管理、維護附中校園的網路資源。
+                    </small>
+                    <small class="center-align mi" style="display: block">arrow_forward</small>
+                </div>
+                <div class="col s6 valign-wrapper" style="margin-top: 26vh">
+                    <img src="club/cnmc.jpg" style="width: 100%">
+                </div>
+            </center>
+        </div>
+
+    </div>
+
+    <script>
+        setTimeout(mloadMap, 700);
+
+    </script>
+
+    <!-- mobile end -->
+
+</body>
+
+</html>
