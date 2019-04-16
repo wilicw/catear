@@ -5,13 +5,13 @@
         <span>卍乂_煞氣a貓耳邪教祭典_乂卍</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <div class="title" v-if="!$vuetify.breakpoint.xsOnly">
+      <div class="title" v-if="!($vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly)">
         <v-btn large flat v-for="item in menu" @click="goto(item.id)">
           <span class="subheading">{{item.text}}</span>
         </v-btn>
       </div>
       <v-icon
-        v-if="$vuetify.breakpoint.xsOnly"
+        v-if="$vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly"
         color="white"
         @click.stop="drawer = !drawer"
       >menu</v-icon>
