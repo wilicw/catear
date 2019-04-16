@@ -62,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .v-content {
+    background-color: #0b4177;
+  }
+</style>
