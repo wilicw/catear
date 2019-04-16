@@ -5,13 +5,13 @@
         <span>卍乂_煞氣a貓耳邪教祭典_乂卍</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <div class="title" v-if="!($vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly)">
+      <div class="desktop title" v-if="!($vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly)">
         <v-btn large flat v-for="item in menu" @click="goto(item.id)">
           <span class="subheading">{{item.text}}</span>
         </v-btn>
       </div>
       <v-icon
-        v-if="$vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly"
+        class="mobile"
         color="white"
         @click.stop="drawer = !drawer"
       >menu</v-icon>
@@ -68,6 +68,22 @@ export default {
 </script>
 
 <style>
+  .desktop {
+    display: block;
+  }
+  @media (max-width: 850px) {
+    .desktop {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none;
+  }
+  @media (max-width: 850px) {
+    .mobile {
+      display: block;
+    }
+  }
   .v-content {
     background:
       linear-gradient(
