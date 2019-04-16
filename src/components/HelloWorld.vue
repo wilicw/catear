@@ -1,147 +1,122 @@
 <template>
-  <v-container>
+  <v-container
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }"
+    v-model="page"
+    style="height: 100%"
+  >
     <v-layout
       text-xs-center
       wrap
     >
+    <div class="card" :class="{'hidd': card!=0}">
       <v-flex xs12>
         <v-img
           :src="require('../assets/logo.svg')"
-          class="my-3"
+          class="my-5"
           contain
           height="200"
         ></v-img>
       </v-flex>
 
       <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+        <h1 class="display-2 font-weight-light mb-3">
+          卍乂_煞氣a貓耳邪教祭典_乂卍0
         </h1>
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-        </p>
       </v-flex>
+      <img width="100%" src="https://ziad-saab.github.io/nyan/nyan.gif"/>
 
-      <v-flex
-        mb-5
-        xs12
-      >
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+    </div>
 
-        <v-layout justify-center>
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-layout>
+    <div class="card" :class="{'hidd': card!=1}">
+      <v-flex mb-4>
+        <h1 class="display-2 font-weight-light mb-3">
+          卍乂_煞氣a貓耳邪教祭典_乂卍1
+        </h1>
       </v-flex>
+      <img width="100%" src="https://ziad-saab.github.io/nyan/nyan.gif"/>
 
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-    </v-layout>
+    </div>
+  </v-layout>
   </v-container>
+
 </template>
 
 <script>
   export default {
     data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader'
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify'
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify'
+      card: 0,
+      scrollA: 0,
+      scrollB: 0,
+      page: null,
+      scrollflag: true
+    }),
+    created() {
+      this.init()
+    },
+    methods: {
+      init: function () {
+        let self = this
+        document.addEventListener('mousewheel', function(e){
+          self.chromemouseScroll(e)
+        })
+        document.addEventListener('DOMMouseScroll', function(e){
+          self.firefoxmouseScroll(e)
+        })
+      },
+      chromemouseScroll: function (e) {
+        this.swipePage(e.deltaY)
+      },
+      firefoxmouseScroll: function (e) {
+        switch (e.detail) {
+          case 3:
+            this.swipePage(55)
+            break
+          case -3:
+            this.swipePage(-55)
+            break
         }
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com'
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com'
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuetifyjs.com'
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs'
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify'
+      },
+      swipePage: function (y) {
+        if (this.scrollflag) {
+          this.scrollflag = !1
+          let dy = Math.round(y)
+          if (dy>=50) {
+            this.card++
+          } else if (dy <= -50) {
+            this.card--
+          }
+          if (this.card < 0) {
+            this.card = 0
+          }
+          console.log(this.card)
         }
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer'
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/layout/pre-defined'
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
+        setTimeout(()=>{this.scrollflag = !0}, 800)
+      },
+      swipe: function (f) {
+        if (f=='Up') {
+          this.swipePage(55)
+        } else if (f=='Down') {
+          this.swipePage(-55)
         }
-
-      ]
-    })
+      }
+    }
   }
 </script>
 
 <style>
+.card {
+  transition-duration: .3s;
+  overflow: visible;
+}
 
+.hidd {
+  height: 0;
+  opacity: 0;
+
+}
 </style>
