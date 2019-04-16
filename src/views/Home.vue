@@ -12,7 +12,7 @@
       <v-flex xs12 sm6 class="maintitle">
         <p class="display-2">卍乂_煞氣a貓耳邪教祭典_乂卍</p>
         <p class="display-1">三校聯合茶會</p>
-        <p class="headline">8/1 - 8/2</p>
+        <p class="headline">8/3 - 8/4</p>
       </v-flex>
     </v-layout>
   </v-container>
