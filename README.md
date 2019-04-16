@@ -1,4 +1,5 @@
-# catear
+# 卍乂_煞氣a貓耳邪教祭典_乂卍
+## 三校聯合茶會
 
 ## Project setup
 ```
@@ -14,16 +15,3 @@ yarn run serve
 ```
 yarn run build
 ```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
