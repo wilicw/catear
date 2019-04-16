@@ -6,7 +6,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="desktop title" v-if="!($vuetify.breakpoint.xsOnly||$vuetify.breakpoint.smOnly)">
-        <v-btn large flat v-for="item in menu" @click="goto(item.id)">
+        <v-btn large flat v-for="item in menu" :key="item.id" @click="goto(item.id)">
           <span class="subheading">{{item.text}}</span>
         </v-btn>
       </div>
