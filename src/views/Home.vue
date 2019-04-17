@@ -44,6 +44,7 @@
   @media (max-width:500px) {
     .nyancat {
       width: 90vw;
+      height: 50vh;
     }
   }
 </style>

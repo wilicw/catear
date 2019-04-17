@@ -76,20 +76,15 @@ export default {
       ),
       url(assets/background.jpg) repeat;
   }
-  .desktop {
-    display: block;
-  }
-  @media (max-width: 850px) {
-    .desktop {
-      display: none;
-    }
-  }
-  .mobile {
-    display: none;
-  }
   @media (max-width: 850px) {
     .mobile {
       display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    .container {
+      height: 90%;
     }
   }
   .v-content {
@@ -98,5 +93,12 @@ export default {
   .container {
     height: 100%;
     @extend %background;
+  }
+
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
   }
 </style>
