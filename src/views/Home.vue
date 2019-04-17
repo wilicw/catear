@@ -28,7 +28,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .maintitle {
     display: flex;
     flex-direction: column;
@@ -39,11 +39,11 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://requestreduce.org/images/nyan-cat-clipart-11.png);
+    background-image: url(../assets/logo.png);
   }
   @media (max-width:500px) {
     .nyancat {
-      height: 300px;
+      width: 90vw;
     }
   }
 </style>
