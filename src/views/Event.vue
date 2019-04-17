@@ -6,7 +6,7 @@
       text-xs-center
       wrap
     >
-      <v-flex xs12 sm6 class="maintitle">
+      <v-flex xs12 sm6>
         <p class="display-2">活動地點</p>
         <p class="display-1">
           茶會 - 松山高中大講堂<br>
@@ -16,7 +16,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card>
+        <v-card color="blue">
           <v-card-title primary-title>
             <div>
               <h3 class="headline mb-0">茶會時間</h3>
@@ -53,5 +53,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 </style>
