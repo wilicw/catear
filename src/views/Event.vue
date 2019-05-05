@@ -7,7 +7,7 @@
       wrap
     >
       <v-flex xs12 sm6>
-        <p class="display-2">活動地點</p>
+        <p class="display-1">活動地點</p>
         <p class="display-1">
           茶會 - 松山高中大講堂<br>
           夜遊 - 公館商圈<br>
