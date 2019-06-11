@@ -7,7 +7,7 @@
       wrap
     >
       <v-flex xs12 sm6 class="px-5">
-        <p class="display-2 mt-4">集合地點</p>
+        <p class="display-2 mt-5">集合地點</p>
         <hr>
         <div text-xs-left>
           <div
