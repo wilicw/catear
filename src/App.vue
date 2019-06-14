@@ -53,9 +53,9 @@ export default {
       menu: [
         {id: 0, text: '活動', link: '/event'},
         {id: 1, text: '地點', link: '/location'},
-        {id: 2, text: '住宿', link: '/'},
+        {id: 2, text: '住宿', link: '/hotel'},
         {id: 3, text: '報名', link: '/Signup'},
-        {id: 4, text: '主辦單位', link: '/'}
+        {id: 4, text: '主辦單位', link: '/club'}
       ]
     }
   },

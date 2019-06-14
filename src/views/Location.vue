@@ -99,16 +99,16 @@
       },
       markers: [
         {
-          location: "臺北車站 M1 出口",
+          location: "臺北車站",
           time: "12:00 ~ 12:30",
           contact:[
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "牟懋軒",
+              phone: "0965490268"
             },
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "林婷君",
+              phone: "0988904289"
             }
           ],
           position: {
@@ -117,16 +117,16 @@
           }
         },
         {
-          location: "捷運市府站1號出口",
+          location: "捷運市府站",
           time: "12:15 ~ 12:45",
           contact:[
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "張庭瑋",
+              phone: "0983183978"
             },
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "林楷傑",
+              phone: "0921199292"
             }
           ],
           position: {
@@ -139,12 +139,12 @@
           time: "12:40 ~ 12:55",
           contact:[
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "范茗翔",
+              phone: "0983556832"
             },
             {
-              name: "XXX",
-              phone: "0900000000"
+              name: "左昌平",
+              phone: "0981729340"
             }
           ],
           position: {

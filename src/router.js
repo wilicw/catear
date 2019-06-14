@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import Event from './views/Event.vue'
 import Location from './views/Location.vue'
 import Signup from './views/Signup.vue'
+import Hotel from './views/Hotel.vue'
+import Club from './views/Club.vue'
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
       path: '/signup',
       name: 'signup',
       component: Signup
+    },
+    {
+      path: '/hotel',
+      name: 'hotel',
+      component: Hotel
+    },
+    {
+      path: '/club',
+      name: 'club',
+      component: Club
     }
   ]
 })
