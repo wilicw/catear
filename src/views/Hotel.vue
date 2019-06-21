@@ -19,7 +19,7 @@
         <p class="title">欲住宿者請交住宿家長同意書</p>
       </v-flex>
       <v-flex xs12 sm6 class="pt-5">
-        <v-img src="http://www.backpackers-hostels.com/images/jpg/about-01.jpg"></v-img>
+        <v-img src="hotel.jpg"></v-img>
       </v-flex>
     </v-layout>
   </v-container>
