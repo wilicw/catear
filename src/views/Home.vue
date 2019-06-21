@@ -6,10 +6,10 @@
       text-xs-center
       wrap
     >
-      <v-flex xs12 sm6 class="mx-5">
+      <v-flex xs12 sm6>
         <div class="nyancat"></div>
       </v-flex>
-      <v-flex xs12 sm6 class="maintitle">
+      <v-flex xs12 sm6 class="maintitle px-5">
         <p class="display-2">卍乂_煞氣a貓耳邪教祭典_乂卍<br>
         <p class="display-1">三校聯合茶會<br>
         <p class="headline">8/3 - 8/4<br>
