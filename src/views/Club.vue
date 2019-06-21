@@ -7,13 +7,17 @@
       text-xs-center
       wrap
     >
-      <v-flex xs12 sm12 md12 lg4>
+      <v-flex xs12 sm12 md12 lg4 class="px-2">
+        <v-img src="ssinrc.jpg"></v-img>
+        <br>
         <p class="headline">臺北市立松山高級中學資訊研究社</p>
       </v-flex>
-      <v-flex xs12 sm12 md12 lg4>
+      <v-flex xs12 sm12 md12 lg4 class="px-2">
+        <v-img src="dacsc.jpg"></v-img>
+        <br>
         <p class="headline">臺北市立大安高級工業職業學校電腦研究社</p>
       </v-flex>
-      <v-flex xs12 sm12 md12 lg4>
+      <v-flex xs12 sm12 md12 lg4 class="px-2">
         <v-img src="cnmc.jpg"></v-img>
         <br>
         <p class="headline">國立臺灣師範大學附屬高級中學校園網路管理小組</p>

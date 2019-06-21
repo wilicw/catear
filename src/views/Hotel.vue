@@ -9,32 +9,17 @@
       <v-flex xs12 sm6 class="px-5">
         <p class="display-2 mt-5">住宿</p>
         <hr>
-        星盒青年旅館
+        <br>
+        <p class="headline">背包棧旅店-西門店</p>
+        <p class="title"><v-icon>home</v-icon> 台北市萬華區康定路25巷13號</p>
+        <p class="title"><v-icon>phone</v-icon> 02 89783666</p>
+        <br>
+        <p class="title"><b>注意事項</b></p>
+        <p class="title">住宿 + 保險費共500元，請於當天攜帶<p>
+        <p class="title">欲住宿者請交住宿家長同意書</p>
       </v-flex>
-      <v-flex xs12 sm6>
-        <GmapMap
-          :center="center"
-          :options="{
-             zoomControl: true,
-             mapTypeControl: false,
-             scaleControl: false,
-             streetViewControl: false,
-             rotateControl: false,
-             fullscreenControl: false,
-             disableDefaultUi: false
-           }"
-          :zoom="13"
-          class="map mt-5"
-        >
-          <GmapMarker
-            v-for="(m,index) in markers"
-            :key="index"
-            :position="m.position"
-            :clickable="true"
-            :draggable="true"
-            @click="center=m.position"
-          />
-        </GmapMap>
+      <v-flex xs12 sm6 class="pt-5">
+        <v-img src="http://www.backpackers-hostels.com/images/jpg/about-01.jpg"></v-img>
       </v-flex>
     </v-layout>
   </v-container>
@@ -46,21 +31,12 @@
     data: () => ({
     }),
     methods: {
-      
+
     }
   }
 </script>
 
 <style lang="scss">
-  .map {
-    width: 100%;
-    height: 70vh;
-  }
-  @media (max-width: 600px) {
-    .map {
-      display: none;
-    }
-  }
   .display-2 {
     font-weight: 500;
   }
