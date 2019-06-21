@@ -6,7 +6,7 @@
       text-xs-center
       wrap
     >
-      <v-flex xs12 sm6 class="px-5">
+      <v-flex xs12 sm6 class="mx-5">
         <div class="nyancat"></div>
       </v-flex>
       <v-flex xs12 sm6 class="maintitle">
