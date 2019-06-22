@@ -16,7 +16,7 @@
         <br>
         <p class="title"><b>注意事項</b></p>
         <p class="title">住宿 + 保險費共 650 元，請於當天攜帶<p>
-        <p class="title">欲住宿者請交住宿家長同意書</p>
+        <p class="title">欲住宿者請交住宿<a href="家長同意書.pdf">家長同意書</a></p>
       </v-flex>
       <v-flex xs12 sm6 class="pt-5">
         <v-img src="hotel.jpg"></v-img>
