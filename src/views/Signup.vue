@@ -137,4 +137,11 @@
   hr {
     color: rgba(0, 0, 0, 0.5);
   }
+  v-text-field, input, input:before, input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+  }
 </style>
