@@ -114,9 +114,7 @@
       showform: true
     }),
     mounted: function () {
-      let ua = navigator.userAgent || navigator.vendor || window.opera
-      let res = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1)
-      if (res) {
+      if (navigator.userAgent.match(/FBIOS/i)) {
         alert("請用 Google Chrome 或 Firefox 報名")
         console.log("don't using the fucking facebook app")
         this.showform = false
