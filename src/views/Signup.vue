@@ -117,9 +117,8 @@
       showform: true
     }),
     mounted: function () {
-      if (navigator.userAgent.match(/FB/i)||navigator.userAgent.match(/Instagram/i)) {
-        alert("請用 Google Chrome 或 Firefox 報名")
-        console.log("don't using the fucking facebook app")
+      if (!navigator.userAgent.match("/Chrome/i")) {
+        window.location.href = "https://forms.gle/oKmkRJRxsXqpqWUo8";
         this.showform = false
       }
     },
@@ -127,7 +126,7 @@
       submit: function () {
         if (this.$refs.form.validate()) {
           let url = `https://script.google.com/macros/s/AKfycby8fEy63h-8U-_cR52pfhXrB7P8gMnxsa9aqw2lgxDgp-tJf0E/exec?name=${this.name}&sex=${this.sex}&club_name=${this.club_name}&year=${this.year}&phone=${this.phone}&em_name=${this.em_name}&em_phone=${this.em_phone}&day=${this.day}&room=${this.room}&id=${this.id}&night=${this.night}`
-          let iframe = document.createElement('iframe');
+          let iframe = document.createElement('img');
           iframe.style.display = "none";
           iframe.src = url;
           document.body.appendChild(iframe)
