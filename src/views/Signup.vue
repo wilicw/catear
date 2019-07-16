@@ -6,7 +6,7 @@
       text-xs-center
       wrap
     >
-      <v-flex  xs12 sm10 offset-sm1 class="px-5">
+      <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="showform">
         <p class="display-2 mt-5">報名</p>
         <v-alert
           :value="true"
@@ -15,7 +15,7 @@
         >
           報名成功！
         </v-alert>
-        <v-form ref="form" v-model="Signform" :v-if="!success">
+        <v-form ref="form" v-model="Signform">
         <v-text-field
           color="indigo lighten-4"
           v-model="name"
@@ -109,8 +109,18 @@
       success: false,
       rule: [
         v => !!v || '此欄必填！',
-      ]
+      ],
+      showform: true
     }),
+    mounted: function () {
+      let ua = navigator.userAgent || navigator.vendor || window.opera
+      let res = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1)
+      if (res) {
+        alert("請用 Google Chrome 或 Firefox 報名")
+        console.log("don't using the fucking facebook app")
+        this.showform = false
+      }
+    },
     methods: {
       submit: function () {
         if (this.$refs.form.validate()) {
