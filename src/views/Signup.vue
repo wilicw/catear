@@ -6,6 +6,9 @@
       text-xs-center
       wrap
     >
+      <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="!showform">
+        <p class="display-2 mt-5">請用 Google Chrome 或 Firefox 報名</p>
+      </v-flex>
       <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="showform">
         <p class="display-2 mt-5">報名</p>
         <p>請勿用 IE Edge 報名!!</p>
@@ -114,7 +117,7 @@
       showform: true
     }),
     mounted: function () {
-      if (navigator.userAgent.match(/FBIOS/i)) {
+      if (navigator.userAgent.match(/FB/i)||navigator.userAgent.match(/Instagram/i)) {
         alert("請用 Google Chrome 或 Firefox 報名")
         console.log("don't using the fucking facebook app")
         this.showform = false
