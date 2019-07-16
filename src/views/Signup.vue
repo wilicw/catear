@@ -8,6 +8,7 @@
     >
       <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="showform">
         <p class="display-2 mt-5">報名</p>
+        <p>請勿用 IE Edge 報名!!</p>
         <v-alert
           :value="true"
           v-if="success"
@@ -130,6 +131,7 @@
           iframe.src = url;
           document.body.appendChild(iframe)
           this.success = true
+          this.$vuetify.goTo(0)
         } else {
         }
       }
