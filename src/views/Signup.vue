@@ -6,6 +6,7 @@
       text-xs-center
       wrap
     >
+    <!---
       <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="!showform">
         <p class="display-2 mt-5">請用 Google Chrome 或 Firefox 報名</p>
       </v-flex>
@@ -89,6 +90,7 @@
         <v-btn @click="submit">送出</v-btn>
       </v-form>
       </v-flex>
+    -->
     </v-layout>
   </v-container>
 
@@ -117,10 +119,7 @@
       showform: true
     }),
     mounted: function () {
-      if (!navigator.userAgent.match("/Chrome/i")) {
-        window.location.href = "https://forms.gle/oKmkRJRxsXqpqWUo8";
-        this.showform = false
-      }
+      window.location.href = "https://forms.gle/oKmkRJRxsXqpqWUo8";
     },
     methods: {
       submit: function () {
