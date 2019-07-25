@@ -6,10 +6,10 @@
       text-xs-center
       wrap
     >
+    <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="!showform">
+      <p class="display-2 mt-5">報名已截止</p>
+    </v-flex>
     <!---
-      <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="!showform">
-        <p class="display-2 mt-5">請用 Google Chrome 或 Firefox 報名</p>
-      </v-flex>
       <v-flex xs12 sm10 offset-sm1 class="px-5" v-if="showform">
         <p class="display-2 mt-5">報名</p>
         <p>請勿用 IE Edge 報名!!</p>
@@ -119,7 +119,15 @@
       showform: true
     }),
     mounted: function () {
-      window.location.href = "https://forms.gle/oKmkRJRxsXqpqWUo8";
+      let today = new Date();
+      let dd = String(today.getDate()).padStart(2, '0');
+      let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      let yyyy = today.getFullYear();
+      if (dd=="25" && mm == "07") {
+        window.location.href = "https://forms.gle/oKmkRJRxsXqpqWUo8";
+      } else {
+        this.showform = false
+      }
     },
     methods: {
       submit: function () {
